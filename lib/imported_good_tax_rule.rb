@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require './lib/constants'
 
-#module to check elegibility to apply imported good tax
+# module to check elegibility to apply imported good tax
 module ImportedGoodTaxRule
   class << self
     def apply_to?(item)

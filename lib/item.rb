@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require './lib/constants'
 require 'yaml'
 
-#class to save items name, quantity, price and whether it is imported or not
+# class to save items name, quantity, price and whether it is imported or not
 class Item
   attr_accessor :quantity, :price, :name, :tax
 
@@ -20,6 +22,6 @@ class Item
   end
 
   def exemptions
-    @exemptions ||= YAML.load File.open(Constants::EXEMPTION_ITEMS)
+    @exemptions ||= YAML.safe_load File.open(Constants::EXEMPTION_ITEMS)
   end
 end

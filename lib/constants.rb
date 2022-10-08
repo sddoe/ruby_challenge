@@ -1,4 +1,6 @@
-#exemption items and tax rates constants
+# frozen_string_literal: true
+
+# exemption items and tax rates constants
 
 module Constants
   EXEMPTION_ITEMS = './lib/exemption_items.yml'

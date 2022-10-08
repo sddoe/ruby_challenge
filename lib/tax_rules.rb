@@ -1,10 +1,11 @@
-#module to store all of the tax rules
+# frozen_string_literal: true
+
+# module to store all of the tax rules
 module TaxRules
   def self.rules
-    @@rules ||= []
+    @rules ||= []
   end
 
-  private
   def self.add_rules(object)
     rules << object
   end

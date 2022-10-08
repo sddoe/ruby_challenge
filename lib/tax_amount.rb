@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require './lib/constants'
 
-#class for calculating the tax amount for the selected shopping cart
+# class for calculating the tax amount for the selected shopping cart
 class TaxAmount
   class << self
     def applicable_taxes(item)
@@ -13,12 +15,11 @@ class TaxAmount
 
     def tax_for(item)
       taxes = applicable_taxes(item).map { |s| s.tax_amount item }
-      result = taxes.inject(0) { |result, element| result + element }
-      result
+      taxes.inject(0) { |r, element| r + element }
     end
 
     def base_tax(item)
-      (item.quantity() * tax_for(item))
+      (item.quantity * tax_for(item))
     end
 
     def tax(item)
@@ -27,7 +28,7 @@ class TaxAmount
     end
 
     def price_amount(item)
-      item.quantity() * item.price()
+      item.quantity * item.price
     end
 
     def taxes_amount(item)

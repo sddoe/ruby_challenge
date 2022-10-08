@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require './lib/constants'
 
-#module to check elegibility to apply basic sales tax
+# module to check elegibility to apply basic sales tax
 module BasicSalesTaxRule
   class << self
     def apply_to?(item)
@@ -14,5 +16,5 @@ module BasicSalesTaxRule
     def tax_rate
       Constants::BASIC_SALES_TAX
     end
-  end  
+  end
 end
