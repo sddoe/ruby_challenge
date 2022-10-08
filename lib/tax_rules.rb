@@ -5,7 +5,7 @@ module TaxRules
   end
 
   private
-  def self.add_rules(class)
-    rules << class
+  def self.add_rules(object)
+    rules << object
   end
 end

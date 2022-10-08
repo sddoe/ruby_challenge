@@ -12,7 +12,7 @@ class TaxAmount
     end
 
     def tax_for(item)
-      taxes = applicable_taxes(item).map { |s| s.tax_for item }
+      taxes = applicable_taxes(item).map { |s| s.tax_amount item }
       result = taxes.inject(0) { |result, element| result + element }
       result
     end
