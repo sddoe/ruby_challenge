@@ -4,7 +4,7 @@ require './lib/constants'
 module ImportedGoodTaxRule
   class << self
     def apply_to?(item)
-      !item.imported_good?
+      item.imported_good?
     end
 
     def tax_amount(item)

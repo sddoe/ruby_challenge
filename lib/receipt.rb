@@ -6,7 +6,7 @@ class Receipt
 
   def print
     @cart.items.each do |item|
-      puts "#{item.quantity()} #{item.name()}: #{(item.price() + item.tax()).round(2)}"
+      puts "#{item.quantity()} #{item.name()}: #{((item.price() * item.quantity()) + item.tax()).round(2)}"
     end
     puts "Salex Tax: #{@cart.total_tax().round(2)}"
     puts "Total: #{(@cart.total_price() + @cart.total_tax()).round(2)}"
