@@ -8,4 +8,4 @@ The coolest dang program that you ever did see.
 
 ## Usage
 
-Install deps: `gem install bundler && bundle install`.  Run `bundle exec rake` to run the tests, or `bundle exec rake run` to run the program.
+Install deps: `gem install bundler && bundle install`.  Run `bundle exec rake` to run the linter and specs. Run `ruby sales_tax.rb <input_file>` to run the program, example: `ruby sales_tax.rb input1.txt`.

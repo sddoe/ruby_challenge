@@ -1,16 +1,13 @@
 require 'rubocop/rake_task'
-
-task default: %w[lint test]
+require 'rspec/core/rake_task'
 
 RuboCop::RakeTask.new(:lint) do |task|
-  task.patterns = ['lib/**/*.rb', 'test/**/*.rb', '*.rb']
+  task.patterns = ['lib/**/*.rb', 'spec/**/*.rb', '*.rb']
   task.fail_on_error = false
 end
 
-task :run do
-  ruby 'lib/cool_program.rb'
-end
+RSpec::Core::RakeTask.new(:spec)
 
-task :test do
-  ruby 'test/cool_program_test.rb'
-end
+task :lint_spec => [:lint, :spec]
+
+task :default => [:lint_spec]
