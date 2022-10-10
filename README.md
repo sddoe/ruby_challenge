@@ -1,6 +1,6 @@
-# ruby_project
+# Code_Challenge
 
-The coolest dang program that you ever did see.
+Code challenge for TeamTorc. Description for code challenge located [here](https://gist.github.com/safplatform/792314da6b54346594432f30d5868f36).
 
 ## Dependencies
 
